@@ -57,78 +57,82 @@ class _LandingPageState extends State<LandingPage> {
           height: MediaQuery.of(context).size.height,
           fit: BoxFit.fill,
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
-          child: Column(
-            children: [
-              //Navigation
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        ListView(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 100, vertical: 30),
+              child: Column(
                 children: [
-                  Image.asset(
-                    "logo.png",
-                    width: 72,
-                    height: 40,
-                  ),
+                  //Navigation
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      navItem(
-                        title: "Guides",
-                        index: 0,
+                      Image.asset(
+                        "logo.png",
+                        width: 72,
+                        height: 40,
                       ),
-                      SizedBox(width: 50),
-                      navItem(
-                        title: "Pricing",
-                        index: 1,
+                      Row(
+                        children: [
+                          navItem(
+                            title: "Guides",
+                            index: 0,
+                          ),
+                          SizedBox(width: 50),
+                          navItem(
+                            title: "Pricing",
+                            index: 1,
+                          ),
+                          SizedBox(width: 50),
+                          navItem(
+                            title: "Teams",
+                            index: 2,
+                          ),
+                          SizedBox(width: 50),
+                          navItem(
+                            title: "Stories",
+                            index: 3,
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 50),
-                      navItem(
-                        title: "Teams",
-                        index: 2,
-                      ),
-                      SizedBox(width: 50),
-                      navItem(
-                        title: "Stories",
-                        index: 3,
+                      Image.asset(
+                        "btnAccount.png",
+                        width: 163,
+                        height: 53,
                       ),
                     ],
                   ),
-                  Image.asset(
-                    "btnAccount.png",
-                    width: 163,
-                    height: 53,
-                  ),
-                ],
-              ),
 
-              //Content
-              SizedBox(height: 76),
-              Image.asset(
-                "illustration.png",
-                height: 570,
-              ),
-
-              //Footer
-              SizedBox(height: 84),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                  //Content
+                  SizedBox(height: 76),
                   Image.asset(
-                    "Icon_scroll.png",
-                    width: 24,
+                    "illustration.png",
+                    height: 570,
                   ),
-                  SizedBox(width: 13),
-                  Text(
-                    "Scroll to Learn More",
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
+
+                  //Footer
+                  SizedBox(height: 84),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "Icon_scroll.png",
+                        width: 24,
+                      ),
+                      SizedBox(width: 13),
+                      Text(
+                        "Scroll to Learn More",
+                        style: GoogleFonts.poppins(
+                          fontSize: 20,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
                   )
                 ],
-              )
-            ],
-          ),
+              ),
+            ),
+          ],
         ),
       ],
     ));
